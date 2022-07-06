@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "azuma"
+version = "0.0.0"
+description = "Azuma Discord bot"
+authors = ["VincentRPS"]
+license = "AGPL"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+disnake = "^2.5.1"
+python-dotenv = "^0.20.0"
+cassandra-driver = "^3.25.0"
+loguru = "^0.6.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"

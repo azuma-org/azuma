@@ -1,0 +1,14 @@
+ci:
+  autofix_commit_msg: |
+    style: run black and isort
+repos:
+  - repo: https://github.com/psf/black
+    rev: 22.6.0
+    hooks:
+      - id: black
+        args: ['--skip-string-normalization']
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        args: ['--profile', 'black']
